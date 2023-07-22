@@ -15,6 +15,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_Ver1Btn_clicked();
+    void on_Ver2Btn_clicked();
+    void on_CreatePatchBtn_clicked();
+
+
 private:
     Ui::MainWindow *ui;
 };
