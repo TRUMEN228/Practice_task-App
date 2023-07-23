@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>515</width>
-    <height>337</height>
+    <width>512</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>File Patcher</string>
   </property>
   <property name="accessibleDescription">
    <string/>
@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>50</y>
+      <y>80</y>
       <width>111</width>
       <height>29</height>
      </rect>
@@ -34,7 +34,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>50</y>
+      <y>80</y>
       <width>341</width>
       <height>28</height>
      </rect>
@@ -50,7 +50,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>50</y>
       <width>261</width>
       <height>20</height>
      </rect>
@@ -63,7 +63,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>100</y>
+      <y>130</y>
       <width>301</width>
       <height>20</height>
      </rect>
@@ -76,7 +76,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>130</y>
+      <y>160</y>
       <width>341</width>
       <height>28</height>
      </rect>
@@ -92,7 +92,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>130</y>
+      <y>160</y>
       <width>111</width>
       <height>29</height>
      </rect>
@@ -105,7 +105,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>220</y>
+      <y>210</y>
       <width>141</width>
       <height>29</height>
      </rect>
@@ -117,8 +117,8 @@
    <widget class="QPushButton" name="ApplyPatchBtn">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>220</y>
+      <x>20</x>
+      <y>510</y>
       <width>141</width>
       <height>29</height>
      </rect>
@@ -127,11 +127,14 @@
      <string>Применить патч</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="PatchPathLabel">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
+      <y>250</y>
       <width>151</width>
       <height>20</height>
      </rect>
@@ -140,11 +143,11 @@
      <string>Патч создан по пути:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="PatchPathPath">
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>260</y>
+      <y>250</y>
       <width>321</width>
       <height>20</height>
      </rect>
@@ -152,11 +155,146 @@
     <property name="font">
      <font>
       <bold>true</bold>
-      <underline>true</underline>
+      <underline>false</underline>
      </font>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="PatchingPath">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>341</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PatchingBtn">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>380</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать файл</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PatchingLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>301</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Введите путь модифицируемого файла:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PatchLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>301</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Введите путь патч-файла:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="PatchPath">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>341</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PatchBtn">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>460</y>
+      <width>111</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать файл</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CreatePatchLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Создание патча</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ApplyPatchLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Применение патча</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ExitBtn">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>510</y>
+      <width>83</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выход</string>
     </property>
    </widget>
    <zorder>Ver1Btn</zorder>
@@ -167,20 +305,28 @@
    <zorder>Ver2Btn</zorder>
    <zorder>ApplyPatchBtn</zorder>
    <zorder>CreatePatchBtn</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
+   <zorder>PatchPathLabel</zorder>
+   <zorder>PatchPathPath</zorder>
+   <zorder>PatchingPath</zorder>
+   <zorder>PatchingBtn</zorder>
+   <zorder>PatchingLabel</zorder>
+   <zorder>PatchLabel</zorder>
+   <zorder>PatchPath</zorder>
+   <zorder>PatchBtn</zorder>
+   <zorder>CreatePatchLabel</zorder>
+   <zorder>ApplyPatchLabel</zorder>
+   <zorder>ExitBtn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>515</width>
+     <width>512</width>
      <height>25</height>
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
