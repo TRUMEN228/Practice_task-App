@@ -226,7 +226,7 @@ void MainWindow::on_CreatePatchBtn_clicked()
     }
 
     else {
-        QString patchpath = QFileDialog::getSaveFileName(0, "Сохранение патч-файла", "C:\\");
+        QString patchpath = QFileDialog::getSaveFileName(0, "Сохранение патч-файла", "C:\\patch.bin");
         ::CreatePatch(ui->Ver1Path->text(), ui->Ver2Path->text(), patchpath);
         ui->PatchPathPath->setText(patchpath);
         QMessageBox::information(this, "Выполнено успешно", "Патч-файл создан успешно");
